@@ -27,8 +27,11 @@ def start_adventure():
         else:
             print("Please try again")
 
-
 def validate_player_age(age_input):
+    """
+    Makes sure that the user types in number, valid age and have security clearency.
+    """
+
     try:
         player_age = int(age_input)
         if player_age < 18:
@@ -42,6 +45,7 @@ def validate_player_age(age_input):
         else:
             print("Invalid input. Please enter a number for age or 'security'.\n")
             return False
+
 
 
 start_adventure()
