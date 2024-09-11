@@ -13,12 +13,20 @@ def start_adventure():
         print("You will need to choose your path wisely to make it to the highest office.\n")
         print("To play the game alone you must be minimum 18 or older. If you are less than 18 and want to play alone please type in (security)")
         
-        player_age = input("Let's start with your age: ")
+        player_age = input("\nLet's start with your age: ")
+        player_name = input("What's your name: \n").strip()
 
         if validate_player_age(player_age):
-            break
+            if player_name:
+                print(f"Welcome {player_name}! to the Apple Park Adventure.")
+                break
+
+            else:
+                print("Name cannot be empty. Please enter a valid name.\n")
+            
         else:
             print("Please try again")
+
 
 def validate_player_age(age_input):
     try:
@@ -32,7 +40,8 @@ def validate_player_age(age_input):
         if age_input.lower() == 'security':
             return True
         else:
-            print("Invalid input. Please enter a number for age or 'security'.")
+            print("Invalid input. Please enter a number for age or 'security'.\n")
             return False
+
 
 start_adventure()
