@@ -101,8 +101,21 @@ def main_building():
         print("Invalid option. Game over")
 
 def executive_corridor():
+    """
+    Giving options to choose to go the highest office or the R&D labs. Where the user looses the game if he/she goes to the labs option
+    """
+    choise = input("Inside the building, you spot two elevators. One says 'Executive Floors,' and the other 'R&D Labs.' Which one do you take? (executive/labs) ").lower()
+
+    if choise == 'executive':
+        print("You take the executive elevator up towards the highest office.")
+        top_office()
+    elif choise == 'labs':
+        print("You ended up in the Research and Development Labs, where everything is top secret. You are escorted out by security. Game over.")
+    else:
+        print("Invalid option. Game over.")
+
+def top_office():
     pass
-    
 
 
 
@@ -172,6 +185,7 @@ def main():
     start_adventure()
     adventure_choices()
     main_building()
+    executive_corridor()
 
 
 #Calling the main function
