@@ -3,7 +3,7 @@ import math
 
 def start_adventure():
     """
-    Introduction for the adventure game, telling the user where he/she is, the main goal, advise to choose wisely and asking to star with their name.
+    Introduction for the adventure game, telling the user where he/she is, the main goal, advice to choose wisely and asking to start with their name.
     """
     while True:
 
@@ -11,14 +11,19 @@ def start_adventure():
         print("As a tech enthusiast, you have decided to explore the heart of innovation at Apple Park.")
         print("However, as you wander through the sprawling campus, you realize you're lost.")
         print("You will need to choose your path wisely to make it to the highest office.\n")
-        print("To play the game alone you must be minimum 18 or older. If you are less than 18 and want to play alone please type in (security)")
+        print("To play the game alone you must be at least 18 or older. If you are less than 18 and want to play alone please type in (security)")
         
         player_age = input("\nLet's start with your age: ")
-        player_name = input("What's your name: \n").strip()
 
         if validate_player_age(player_age):
-            if player_name:
-                print(f"Welcome {player_name}! to the Apple Park Adventure.")
+            #Asking for the name only after age has been validated so player doesn't enter a name if they're not allowed to continue. 
+            player_name = input("What's your name: ").strip()
+            if validate_player_name(player_name):
+
+                print(f"\nWelcome {player_name}! You are ready to embark on the Apple Park Adventure.")
+                print("As you step into the sprawling campus of innovation, you'll face choices that could either guide you to greatness or leave you wandering.")
+                print("Trust your instincts, think wisely, and remember, every decision shapes your journey.")
+                print("\nGood luck, adventurer! Let the journey begin...\n")
                 break
 
             else:
@@ -29,7 +34,7 @@ def start_adventure():
 
 def validate_player_age(age_input):
     """
-    Makes sure that the user types in number, valid age and have security clearency.
+    Makes sure that the user types in number, valid age and has security clearance.
     """
 
     try:
@@ -46,6 +51,14 @@ def validate_player_age(age_input):
             print("Invalid input. Please enter a number for age or 'security'.\n")
             return False
 
-
+def validate_player_name(name):
+    """
+    Validated that the player's name is not empty and contains only letters and spaces
+    """
+    if not name: 
+        return False
+    else:
+        #Check if name contains only alphabetic characters and spaces
+        return all(part.isalpha() or part.isspace() for part in name)
 
 start_adventure()
