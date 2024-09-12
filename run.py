@@ -62,6 +62,10 @@ def validate_player_name(name):
         return all(part.isalpha() or part.isspace() for part in name)
 
 def adventure_choices():
+    """
+    Giving the user the imporaant choise of the adventure and call the main building if user takes right path
+    """
+
     choise = input("You start at the Apple Park Visitor Center. Do you explore the store or head straight to the main building? (explore/head) ").lower()
     
     if choise == 'explore':
@@ -77,6 +81,28 @@ def adventure_choices():
         main_building()
     else:
         print("Invalid option. Game over.")
+
+def main_building():
+    """
+    Inform that the user arrived The Spaceship, give options and if he takes the right path call the executive corridor function otherwise error message and game over from the executive corridor function
+    """
+
+    choise = input("You arrive at the entrance of the Apple Park main building, also known as 'The Spaceship.' The circular glass structure is impressive. Do you enter through the main lobby or take the side entrance near the Steve Jobs Theater? (lobby/side) ").lower()
+    
+    if choise == 'lobby':
+        print("You enter through the sleek main lobby, greeted by natural light and a massive open space.")
+        executive_corridor()
+    
+    elif choise == 'side':
+        print("You enter through a smaller side door near the Steve Jobs Theater. It's quieter but feels exclusive.")
+        executive_corridor()
+
+    else:
+        print("Invalid option. Game over")
+
+def executive_corridor():
+    pass
+    
 
 
 
@@ -145,6 +171,7 @@ def main():
 
     start_adventure()
     adventure_choices()
+    main_building()
 
 
 #Calling the main function
