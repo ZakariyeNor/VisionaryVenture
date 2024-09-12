@@ -61,13 +61,91 @@ def validate_player_name(name):
         #Check if name contains only alphabetic characters and spaces
         return all(part.isalpha() or part.isspace() for part in name)
 
+def adventure_choices():
+    choise = input("You start at the Apple Park Visitor Center. Do you explore the store or head straight to the main building? (explore/head) ").lower()
+    
+    if choise == 'explore':
+        print("You spend some time exploring the Visitor Center, admiring the Apple products and grabbing a coffee.")
+        choise = input("Do you now want to head to the main building or stay longer? (head/stay) ").lower()
+        if choise == 'stay':
+            print("You stayed too long, and the offices closed. Game over.")
+            
+        else:
+            print("You decide to head towards the main building.")
+            main_building()
+    elif choise == 'head':
+        main_building()
+    else:
+        print("Invalid option. Game over.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def main():
     """
     Main function to controll the flow of the game and call all the program from one function
     """
 
     start_adventure()
+    adventure_choices()
 
-    
+
 #Calling the main function
 main()
