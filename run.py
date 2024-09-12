@@ -61,4 +61,13 @@ def validate_player_name(name):
         #Check if name contains only alphabetic characters and spaces
         return all(part.isalpha() or part.isspace() for part in name)
 
-start_adventure()
+def main():
+    """
+    Main function to controll the flow of the game and call all the program from one function
+    """
+
+    start_adventure()
+
+    
+#Calling the main function
+main()
