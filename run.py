@@ -99,6 +99,8 @@ def game_loop():
         result = adventure_choices()
         building = main_building()
         higher_office = top_office()
+        ceo = ceo_office()
+        exit = exit_options()
 
         if result == 'main_building':
             main_building()
@@ -114,10 +116,18 @@ def game_loop():
         elif higher_office == 'top_office':
             top_office()
 
+        elif ceo == 'ceo_office':
+            ceo_office()
+
+        elif final == 'final_decision':
+            final_decision()
+
+        elif exit == 'exit_options':
+            exit_options()
+
         else:
             print(F"An unexpected error occurred.")
             break 
-
 
 def main_building():
     """
@@ -140,8 +150,6 @@ def main_building():
             print("Invalid option. Game over")
             return 'invalid_choice'
 
-    
-
 def executive_corridor():
     """
     Function to give the user two options, go to the highest office or go high secret area, and depends the choise either keep playin or being escorted out by security and loose the game
@@ -154,7 +162,7 @@ def executive_corridor():
 
     elif choise == 'labs':
         print("You ended up in the Research and Development Labs, where everything is top secret. You are escorted out by security. Game over.")
-        return 'game over'
+        return 'game_over'
     else:
         print("Invalid option. Game over.")
         return 'invalid_choice'
@@ -168,11 +176,14 @@ def top_office():
 
     if choise == 'design':
         print("You meet the design team, but the office you're looking for isn't here. You lose the game.")
+        return 'game_over'
+
     elif choise == 'top':
         print("You head towards the top office of Apple.")
-        ceo_office()
+        return 'ceo_office'
     else:
         print("Invalid option. Game over.")
+        return 'invalid_choice'
 
 def ceo_office():
     """
@@ -183,25 +194,31 @@ def ceo_office():
 
     if choise == 'enter':
         print("You meet Tim Cook, and he greets you warmly. You’ve reached the highest office in Apple Park!")
-        final_decision()
+        return 'final_decision'
+
     elif choise == 'wait':
         print("You wait too long, and the office closes. Game over.")
+        return 'game_over'
     else:
         print("Invalid option. Game over.")
+        return 'invalid_choice'
 
 def final_decision():
     """
     Function for the final step to win or loose the adventure game
     """
     choise = input("Do you ask Tim Cook for advice on your next move, or just leave the office? (ask/leave) ")
+
     if choise == 'leave':
         print("You left without talking to Tim Cook. You missed your chance. Game over.")
+        return 'game_over'
+
     elif choise == 'ask':
         print("Tim Cook shares valuable insights with you. You win the game!")
+        return 'exit_options'
     else:
         print("Invalid option. Game over.")
-
-    exit_options()
+        return 'invalid_choice'
 
 def exit_options():
     """
