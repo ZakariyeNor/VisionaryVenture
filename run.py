@@ -64,49 +64,83 @@ def validate_player_name(name):
 
 def adventure_choices():
     """
-    Giving the user the imporaant choise of the adventure and call the main building if user takes right path
+    Giving the user the important choice of the adventure and calling the main building if user takes the right path.
+    Returns the result of the user's decision.
     """
+
     while True:
         choise = input("You start at the Apple Park Visitor Center. Do you explore the store or head straight to the main building? (explore/head) ").lower()
-        
+            
         if choise == 'explore':
-            print("You spend some time exploring the Visitor Center, admiring the Apple products and grabbing a coffee.")
-            choise = input("Do you now want to head to the main building or stay longer? (head/stay) ").lower()
+                print("You spend some time exploring the Visitor Center, admiring the Apple products and grabbing a coffee.")
+                choise = input("Do you now want to head to the main building or stay longer? (head/stay) ").lower()
 
-            if choise == 'stay':
-                print("You stayed too long, and the offices closed. Game over.")
-                break
+                if choise == 'stay':
+                    print("You stayed too long, and the offices closed. Game over.")
+                    return 'game_over'
 
-            elif choise == 'head':
-                print("You decide to head towards the main building.")
-                main_building()
-                break
-            else:
-                print("Invalid option. Game over.")
+                elif choise == 'head':
+                    print("You decide to head towards the main building.")
+                    return 'main_building'
+                   
+                else:
+                    print("Invalid option. Game over.")
+                    return 'invalid_choice'
 
         elif choise == 'head':
-            main_building()
-            break
+            return 'main_building'
+                
         else:
             print("Invalid option. Game over.")
+            return 'invalid_choice'
+
+def game_loop():
+    while True:
+        result = adventure_choices()
+        building = main_building()
+        higher_office = top_office()
+
+        if result == 'main_building':
+            main_building()
+        elif result == 'game_over':
+            print("Game Over. You can try again!")
+            break
+        elif result == 'invalid_choice':
+            print("You made an invalid choice. Please follow the instructions next time.")
+            break
+        elif building == 'executive_corridor':
+            executive_corridor()
+
+        elif higher_office == 'top_office':
+            top_office()
+
+        else:
+            print(F"An unexpected error occurred.")
+            break 
+
 
 def main_building():
     """
     Inform that the user arrived The Spaceship, give options and if he takes the right path call the executive corridor function otherwise error message and game over from the executive corridor function
     """
+    while True:
 
-    choise = input("You arrive at the entrance of the Apple Park main building, also known as 'The Spaceship.' The circular glass structure is impressive. Do you enter through the main lobby or take the side entrance near the Steve Jobs Theater? (lobby/side) ").lower()
-    
-    if choise == 'lobby':
-        print("You enter through the sleek main lobby, greeted by natural light and a massive open space.")
-        executive_corridor()
-    
-    elif choise == 'side':
-        print("You enter through a smaller side door near the Steve Jobs Theater. It's quieter but feels exclusive.")
-        executive_corridor()
+        choise = input("You arrive at the entrance of the Apple Park main building, also known as 'The Spaceship.' The circular glass structure is impressive. Do you enter through the main lobby or take the side entrance near the Steve Jobs Theater? (lobby/side) ").lower()
+        
+        
+        if choise == 'lobby':
+            print("You enter through the sleek main lobby, greeted by natural light and a massive open space.")
+            return 'executive_corridor'
+        
+        elif choise == 'side':
+            print("You enter through a smaller side door near the Steve Jobs Theater. It's quieter but feels exclusive.")
+            return 'executive_corridor'
 
-    else:
-        print("Invalid option. Game over")
+        else:
+            print("Invalid option. Game over")
+            return 'invalid_choice'
+
+    
 
 def executive_corridor():
     """
@@ -116,11 +150,14 @@ def executive_corridor():
 
     if choise == 'executive':
         print("You take the executive elevator up towards the highest office.")
-        top_office()
+        return 'top_office'
+
     elif choise == 'labs':
         print("You ended up in the Research and Development Labs, where everything is top secret. You are escorted out by security. Game over.")
+        return 'game over'
     else:
         print("Invalid option. Game over.")
+        return 'invalid_choice'
 
 def top_office():
     """
@@ -191,6 +228,7 @@ def main():
     """
 
     start_adventure()
+    game_loop()
     adventure_choices()
     main_building()
     executive_corridor()
@@ -202,3 +240,5 @@ def main():
 
 #Calling the main function
 main()
+
+
