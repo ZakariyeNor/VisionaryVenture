@@ -84,15 +84,13 @@ def adventure_choices():
                     return 'main_building'
                    
                 else:
-                    print("Invalid option. Game over.")
-                    return 'invalid_choice'
+                    print("Invalid option. Please choose 'stay' or 'head'. \n")
 
         elif choise == 'head':
             return 'main_building'
                 
         else:
-            print("Invalid option. Game over.")
-            return 'invalid_choice'
+            print("Invalid option. Please choose 'explore' or 'head'. \n")
 
 def game_loop():
     while True:
@@ -147,8 +145,7 @@ def main_building():
             return 'executive_corridor'
 
         else:
-            print("Invalid option. Game over")
-            return 'invalid_choice'
+            print("Invalid option. Please choose 'lobby' or 'side'. \n")
 
 def executive_corridor():
     """
@@ -164,8 +161,7 @@ def executive_corridor():
         print("You ended up in the Research and Development Labs, where everything is top secret. You are escorted out by security. Game over.")
         return 'game_over'
     else:
-        print("Invalid option. Game over.")
-        return 'invalid_choice'
+        print("Invalid option. Please choose 'executive' or 'labs'. \n")
 
 def top_office():
     """
@@ -182,8 +178,7 @@ def top_office():
         print("You head towards the top office of Apple.")
         return 'ceo_office'
     else:
-        print("Invalid option. Game over.")
-        return 'invalid_choice'
+       print("Invalid option. Please choose 'design' or 'top'. \n")
 
 def ceo_office():
     """
@@ -200,8 +195,7 @@ def ceo_office():
         print("You wait too long, and the office closes. Game over.")
         return 'game_over'
     else:
-        print("Invalid option. Game over.")
-        return 'invalid_choice'
+        print("Invalid option. Please choose 'enter' or 'wait'. \n")
 
 def final_decision():
     """
@@ -217,8 +211,7 @@ def final_decision():
         print("Tim Cook shares valuable insights with you. You win the game!")
         return 'exit_options'
     else:
-        print("Invalid option. Game over.")
-        return 'invalid_choice'
+        print("Invalid option. Please choose 'leave' or 'ask'. \n")
 
 def exit_options():
     """
