@@ -16,7 +16,8 @@ def start_adventure():
         player_age = input("\nLet's start with your age: ")
 
         if validate_player_age(player_age):
-            #Asking for the name only after age has been validated so player doesn't enter a name if they're not allowed to continue. 
+    
+    #Asking for the name only after age has been validated so player doesn't enter a name if they're not allowed to continue. 
             player_name = input("What's your name: ").strip()
             if validate_player_name(player_name):
 
@@ -65,22 +66,29 @@ def adventure_choices():
     """
     Giving the user the imporaant choise of the adventure and call the main building if user takes right path
     """
+    while True:
+        choise = input("You start at the Apple Park Visitor Center. Do you explore the store or head straight to the main building? (explore/head) ").lower()
+        
+        if choise == 'explore':
+            print("You spend some time exploring the Visitor Center, admiring the Apple products and grabbing a coffee.")
+            choise = input("Do you now want to head to the main building or stay longer? (head/stay) ").lower()
 
-    choise = input("You start at the Apple Park Visitor Center. Do you explore the store or head straight to the main building? (explore/head) ").lower()
-    
-    if choise == 'explore':
-        print("You spend some time exploring the Visitor Center, admiring the Apple products and grabbing a coffee.")
-        choise = input("Do you now want to head to the main building or stay longer? (head/stay) ").lower()
-        if choise == 'stay':
-            print("You stayed too long, and the offices closed. Game over.")
-            
-        else:
-            print("You decide to head towards the main building.")
+            if choise == 'stay':
+                print("You stayed too long, and the offices closed. Game over.")
+                break
+
+            elif choise == 'head':
+                print("You decide to head towards the main building.")
+                main_building()
+                break
+            else:
+                print("Invalid option. Game over.")
+
+        elif choise == 'head':
             main_building()
-    elif choise == 'head':
-        main_building()
-    else:
-        print("Invalid option. Game over.")
+            break
+        else:
+            print("Invalid option. Game over.")
 
 def main_building():
     """
@@ -143,7 +151,6 @@ def ceo_office():
         print("You wait too long, and the office closes. Game over.")
     else:
         print("Invalid option. Game over.")
-
 
 def final_decision():
     """
