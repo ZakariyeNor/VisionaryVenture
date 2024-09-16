@@ -3,6 +3,8 @@ import os
 import math
 import time
 
+global PLAYER_NAME
+
 def clear():
     """
     Clear function to clean-up the terminal so things don't get messy.
@@ -76,6 +78,11 @@ def validate_player_name(name):
         #Check if name contains only alphabetic characters and spaces
         return all(part.isalpha() or part.isspace() for part in name)
 
+def game_over():
+    global PLAYER_NAME
+    print(f"Thank you {player_name} for playing the journey to the highest office at Apple Park!")
+    exit()
+
 def adventure_choices():
     """
     Giving the user the important choice of the adventure and calling the main building if user takes the right path.
@@ -84,27 +91,30 @@ def adventure_choices():
 
     while True:
         choise = input("You start at the Apple Park Visitor Center. Do you explore the store or head straight to the main building? (explore/head) ").lower()
+        clear()
             
         if choise == 'explore':
                 print("You spend some time exploring the Visitor Center, admiring the Apple products and grabbing a coffee.")
                 choise = input("Do you now want to head to the main building or stay longer? (head/stay) ").lower()
-
+                clear()
                 if choise == 'stay':
                     print("You stayed too long, and the offices closed. Game over.")
-                    return 'game_over'
+                    game_over()
 
                 elif choise == 'head':
                     print("You decide to head towards the main building.")
-                    return 'main_building'
+                    break
                    
                 else:
                     print("Invalid option. Please choose 'stay' or 'head'. \n")
 
         elif choise == 'head':
-            return 'main_building'
+            break
                 
         else:
             print("Invalid option. Please choose 'explore' or 'head'. \n")
+    
+    main_building()
 
 def game_loop(player_name):
     while True:
@@ -244,7 +254,7 @@ def exit_options(player_name):
     for option in exit_options_list:
         return option
 
-    print(f"Thank you {player_name} for playing the journey to the highest office at Apple Park!")
+    
 
 def main():
     """
