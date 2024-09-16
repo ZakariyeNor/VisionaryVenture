@@ -119,12 +119,12 @@ def adventure_choices():
 def game_loop(player_name):
     while True:
         # result = adventure_choices()
-        building = main_building()
+        """"building = main_building()
         higher_office = top_office()
         ceo = ceo_office()
-        exits = exit_options(player_name)
+        exits = exit_options(player_name)""""
 
-        if result == 'main_building':
+        """if result == 'main_building':
             main_building()
         elif result == 'game_over':
             print("Game Over. You can try again!")
@@ -145,7 +145,7 @@ def game_loop(player_name):
             exit_options()
 
         elif exits == 'exit_options':
-            exit_options(player_name)
+            exit_options(player_name)"""
 
         else:
             print(F"An unexpected error occurred.")
@@ -158,101 +158,127 @@ def main_building():
     while True:
 
         choise = input("You arrive at the entrance of the Apple Park main building, also known as 'The Spaceship.' The circular glass structure is impressive. Do you enter through the main lobby or take the side entrance near the Steve Jobs Theater? (lobby/side) ").lower()
+        clear()
         
         
         if choise == 'lobby':
             print("You enter through the sleek main lobby, greeted by natural light and a massive open space.")
-            return 'executive_corridor'
+            break
         
         elif choise == 'side':
             print("You enter through a smaller side door near the Steve Jobs Theater. It's quieter but feels exclusive.")
-            return 'executive_corridor'
+            break
 
         else:
             print("Invalid option. Please choose 'lobby' or 'side'. \n")
+
+    executive_corridor()
 
 def executive_corridor():
     """
     Function to give the user two options, go to the highest office or go high secret area, and depends the choise either keep playin or being escorted out by security and loose the game
     """
-    choise = input("Inside the building, you spot two elevators. One says 'Executive Floors,' and the other 'R&D Labs.' Which one do you take? (executive/labs) ").lower()
 
-    if choise == 'executive':
-        print("You take the executive elevator up towards the highest office.")
-        return 'top_office'
+    while True:
+        choise = input("Inside the building, you spot two elevators. One says 'Executive Floors,' and the other 'R&D Labs.' Which one do you take? (executive/labs) ").lower()
+        clear()
 
-    elif choise == 'labs':
-        print("You ended up in the Research and Development Labs, where everything is top secret. You are escorted out by security. Game over.")
-        return 'game_over'
-    else:
-        print("Invalid option. Please choose 'executive' or 'labs'. \n")
+        if choise == 'executive':
+            print("You take the executive elevator up towards the highest office.")
+            break
+
+        elif choise == 'labs':
+            print("You ended up in the Research and Development Labs, where everything is top secret. You are escorted out by security. Game over.")
+            game_over()
+        else:
+            print("Invalid option. Please choose 'executive' or 'labs'. \n")
+
+    top_office()
+
 
 def top_office():
     """
     Function for going either to design team or top office. And calling the ceo office function if the user chooses the right path
     """
+    while True:
+        choise = input("You exit the elevator and walk down the executive corridor. Do you want to visit the design team offices on this floor or go straight to the top office? (design/top) ").lower()
+        clear()
 
-    choise = input("You exit the elevator and walk down the executive corridor. Do you want to visit the design team offices on this floor or go straight to the top office? (design/top) ").lower()
+        if choise == 'design':
+            print("You meet the design team, but the office you're looking for isn't here. You lose the game.")
+            game_over()
 
-    if choise == 'design':
-        print("You meet the design team, but the office you're looking for isn't here. You lose the game.")
-        return 'game_over'
+        elif choise == 'top':
+            print("You head towards the top office of Apple.")
+            break
+        else:
+            print("Invalid option. Please choose 'design' or 'top'. \n")
 
-    elif choise == 'top':
-        print("You head towards the top office of Apple.")
-        return 'ceo_office'
-    else:
-       print("Invalid option. Please choose 'design' or 'top'. \n")
+
+    ceo_office()
+    
 
 def ceo_office():
     """
     Function to give the user to be bolite and wait the Apple CEO or go in his office and ask your question
     """
 
-    choise = input("You arrive at Tim Cook's office. The door is slightly open. Do you enter or wait? (enter/wait) ").lower()
+    while True:
+        choise = input("You arrive at Tim Cook's office. The door is slightly open. Do you enter or wait? (enter/wait) ").lower()
 
-    if choise == 'enter':
-        print("You meet Tim Cook, and he greets you warmly. You’ve reached the highest office in Apple Park!")
-        return 'final_decision'
+        if choise == 'enter':
+            print("You meet Tim Cook, and he greets you warmly. You’ve reached the highest office in Apple Park!")
+            break
 
-    elif choise == 'wait':
-        print("You wait too long, and the office closes. Game over.")
-        return 'game_over'
-    else:
-        print("Invalid option. Please choose 'enter' or 'wait'. \n")
+        elif choise == 'wait':
+            print("You wait too long, and the office closes. Game over.")
+            game_over()
+        else:
+            print("Invalid option. Please choose 'enter' or 'wait'. \n")
+
+    final_decision()
 
 def final_decision():
     """
     Function for the final step to win or loose the adventure game
     """
-    choise = input("Do you ask Tim Cook for advice on your next move, or just leave the office? (ask/leave) ")
 
-    if choise == 'leave':
-        print("You left without talking to Tim Cook. You missed your chance. Game over.")
-        return 'game_over'
+    while True:
+        choise = input("Do you ask Tim Cook for advice on your next move, or just leave the office? (ask/leave) ")
 
-    elif choise == 'ask':
-        print("Tim Cook shares valuable insights with you. You win the game!")
-        return 'final_decision'
-    else:
-        print("Invalid option. Please choose 'leave' or 'ask'. \n")
+        if choise == 'leave':
+            print("You left without talking to Tim Cook. You missed your chance. Game over.")
+            game_over()
+
+        elif choise == 'ask':
+            print("Tim Cook shares valuable insights with you. You win the game!")
+            break
+        else:
+            print("Invalid option. Please choose 'leave' or 'ask'. \n")
+
+    exit_options()
 
 def exit_options(player_name):
     """
     Options to exit the Park
     """
-    print(f"Adventurer {player_name} you have 5 options to exit Apple Park:")
 
-    exit_options_list = [
-        "1. Exit through the main gate and head to the Visitor Center",
-        "2. Leave by the side gate near the Steve Jobs Theater.",
-        "3. Exit using the underground parking near the R&D Labs.",
-        "4. Take the rooftop helicopter if you're feeling adventurous.",
-        "5. Walk out through the beautifully landscaped garden paths."
-    ]
+    while True:
+        print(f"Adventurer {player_name} you have 5 options to exit Apple Park:")
 
-    for option in exit_options_list:
-        return option
+        exit_options_list = [
+            "1. Exit through the main gate and head to the Visitor Center",
+            "2. Leave by the side gate near the Steve Jobs Theater.",
+            "3. Exit using the underground parking near the R&D Labs.",
+            "4. Take the rooftop helicopter if you're feeling adventurous.",
+            "5. Walk out through the beautifully landscaped garden paths."
+        ]
+
+        for option in exit_options_list:
+            print(option)
+
+        if 
+
 
     
 
