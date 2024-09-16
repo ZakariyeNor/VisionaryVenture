@@ -3,39 +3,49 @@ import os
 import math
 import time
 
-
+def clear():
+    """
+    Clear function to clean-up the terminal so things don't get messy.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
 
 def start_adventure():
     """
     Introduction for the adventure game, telling the user where he/she is, the main goal, advice to choose wisely and asking to start with their name.
     """
-    while True:
+    print("\nWelcome to the Apple Park Adventure!")
+    time.sleep(0.25)
+    print("As a tech enthusiast, you have decided to explore the heart of innovation at Apple Park.")
+    time.sleep(0.25)
+    print("However, as you wander through the sprawling campus, you realize you're lost.")
+    time.sleep(0.25)
+    print("You will need to choose your path wisely to make it to the highest office.\n")
+    time.sleep(0.25)
+    print("To play the game alone you must be at least 18 or older. If you are less than 18 and want to play alone please type in (security)")
+    time.sleep(0.25)
 
-        print("\nWelcome to the Apple Park Adventure!")
-        print("As a tech enthusiast, you have decided to explore the heart of innovation at Apple Park.")
-        print("However, as you wander through the sprawling campus, you realize you're lost.")
-        print("You will need to choose your path wisely to make it to the highest office.\n")
-        print("To play the game alone you must be at least 18 or older. If you are less than 18 and want to play alone please type in (security)")
-        
+    while True:
         player_age = input("\nLet's start with your age: ")
 
         if validate_player_age(player_age):
+            break
+        else:
+            print("Please try again")
     
-    #Asking for the name only after age has been validated so player doesn't enter a name if they're not allowed to continue. 
+        #Asking for the name only after age has been validated so player doesn't enter a 
+        # name if they're not allowed to continue. 
+    while True:
             player_name = input("What's your name: ").strip()
-            if validate_player_name(player_name):
 
+            if validate_player_name(player_name):
                 print(f"\nWelcome {player_name}! You are ready to embark on the Apple Park Adventure.")
                 print("As you step into the sprawling campus of innovation, you'll face choices that could either guide you to greatness or leave you wandering.")
                 print("Trust your instincts, think wisely, and remember, every decision shapes your journey.")
                 print("\nGood luck, adventurer! Let the journey begin...\n")
                 return player_name
-
             else:
                 print("Name cannot be empty. Please enter a valid name.\n")
-            
-        else:
-            print("Please try again")
+    
 
 def validate_player_age(age_input):
     """
@@ -98,7 +108,7 @@ def adventure_choices():
 
 def game_loop(player_name):
     while True:
-        result = adventure_choices()
+        # result = adventure_choices()
         building = main_building()
         higher_office = top_office()
         ceo = ceo_office()
