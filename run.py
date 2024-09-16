@@ -15,6 +15,7 @@ def start_adventure():
     """
     Introduction for the adventure game, telling the user where he/she is, the main goal, advice to choose wisely and asking to start with their name.
     """
+    global PLAYER_NAME
     print("\nWelcome to the Apple Park Adventure!")
     time.sleep(0.25)
     print("As a tech enthusiast, you have decided to explore the heart of innovation at Apple Park.")
@@ -37,18 +38,17 @@ def start_adventure():
         #Asking for the name only after age has been validated so player doesn't enter a 
         # name if they're not allowed to continue. 
     while True:
-            player_name = input("What's your name: ").strip()
+            PLAYER_NAME = input("What's your name: ").strip()
             clear()
-            if validate_player_name(player_name):
-                print(f"\nWelcome {player_name}! You are ready to embark on the Apple Park Adventure.")
+            if validate_player_name(PLAYER_NAME):
+                print(f"\nWelcome {PLAYER_NAME}! You are ready to embark on the Apple Park Adventure.")
                 print("As you step into the sprawling campus of innovation, you'll face choices that could either guide you to greatness or leave you wandering.")
                 print("Trust your instincts, think wisely, and remember, every decision shapes your journey.")
                 print("\nGood luck, adventurer! Let the journey begin...\n")
-                return player_name
+                return PLAYER_NAME
             else:
                 print("Name cannot be empty. Please enter a valid name.\n")
     
-
 def validate_player_age(age_input):
     """
     Makes sure that the user types in number, valid age and has security clearance.
@@ -72,6 +72,7 @@ def validate_player_name(name):
     """
     Validated that the player's name is not empty and contains only letters and spaces
     """
+    global PLAYER_NAME
     if not name: 
         return False
     else:
@@ -80,7 +81,7 @@ def validate_player_name(name):
 
 def game_over():
     global PLAYER_NAME
-    print(f"Thank you {player_name} for playing the journey to the highest office at Apple Park!")
+    print(f"Thank you {PLAYER_NAME} for playing the journey to the highest office at Apple Park!")
     exit()
 
 def adventure_choices():
@@ -115,41 +116,6 @@ def adventure_choices():
             print("Invalid option. Please choose 'explore' or 'head'. \n")
     
     main_building()
-
-def game_loop(player_name):
-    while True:
-        # result = adventure_choices()
-        """"building = main_building()
-        higher_office = top_office()
-        ceo = ceo_office()
-        exits = exit_options(player_name)""""
-
-        """if result == 'main_building':
-            main_building()
-        elif result == 'game_over':
-            print("Game Over. You can try again!")
-            break
-        elif result == 'invalid_choice':
-            print("You made an invalid choice. Please follow the instructions next time.")
-            break
-        elif building == 'executive_corridor':
-            executive_corridor()
-
-        elif higher_office == 'top_office':
-            top_office()
-
-        elif ceo == 'ceo_office':
-            ceo_office()
-
-        elif final == 'final_decision':
-            exit_options()
-
-        elif exits == 'exit_options':
-            exit_options(player_name)"""
-
-        else:
-            print(F"An unexpected error occurred.")
-            break 
 
 def main_building():
     """
@@ -225,6 +191,7 @@ def ceo_office():
 
     while True:
         choise = input("You arrive at Tim Cook's office. The door is slightly open. Do you enter or wait? (enter/wait) ").lower()
+        clear()
 
         if choise == 'enter':
             print("You meet Tim Cook, and he greets you warmly. You’ve reached the highest office in Apple Park!")
@@ -244,7 +211,8 @@ def final_decision():
     """
 
     while True:
-        choise = input("Do you ask Tim Cook for advice on your next move, or just leave the office? (ask/leave) ")
+        choise = input("Do you ask Tim Cook for advice on your next move, or just leave the office? (ask/leave) ").lower()
+        clear()
 
         if choise == 'leave':
             print("You left without talking to Tim Cook. You missed your chance. Game over.")
@@ -262,9 +230,10 @@ def exit_options(player_name):
     """
     Options to exit the Park
     """
+    global PLAYER_NAME
 
     while True:
-        print(f"Adventurer {player_name} you have 5 options to exit Apple Park:")
+        print(f"Adventurer {PLAYER_NAME} you have 5 options to exit Apple Park:")
 
         exit_options_list = [
             "1. Exit through the main gate and head to the Visitor Center",
@@ -277,29 +246,39 @@ def exit_options(player_name):
         for option in exit_options_list:
             print(option)
 
-        if 
+        choise = input(f"\n Choose which path you want take to exit the Apple Park")
+        clear()
+
+        if choise in ["1", "2", "3", "4", "5"]:
+            if choise == "1":
+                print("You exited through the main gate.")
+                break
+            elif choise == "2":
+                print("You exited the side gate near the Steve Jobs Theater.")
+                break
+            elif choise == "3":
+                print("You exited using the underground parking near the R&D Labs.")
+                break
+            elif choise == "4":
+                print("You took helicoter from the rooftop.")
+                break
+            elif choise == "3":
+                print("You exited walking out through the beautifully landscaped garden paths.")
+                break
+        else:
+            print(f"{choise} Invalid. Please enter 1 - 5\n")
+
+    game_over()
 
 
-    
-
-def main():
+#Calling the main function
+if __name__ == "__main__":
     """
     Main function to controll the flow of the game and call all the program from one function
     """
 
-    
-    player_name = start_adventure()
-    game_loop(player_name)
+    clear()
+    start_adventure()
     adventure_choices()
-    main_building()
-    executive_corridor()
-    top_office()
-    ceo_office()
-    final_decision()
-    exit_options(player_name)
-
-
-#Calling the main function
-main()
 
 
