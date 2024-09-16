@@ -26,7 +26,7 @@ def start_adventure():
 
     while True:
         player_age = input("\nLet's start with your age: ")
-
+        clear()
         if validate_player_age(player_age):
             break
         else:
@@ -36,7 +36,7 @@ def start_adventure():
         # name if they're not allowed to continue. 
     while True:
             player_name = input("What's your name: ").strip()
-
+            clear()
             if validate_player_name(player_name):
                 print(f"\nWelcome {player_name}! You are ready to embark on the Apple Park Adventure.")
                 print("As you step into the sprawling campus of innovation, you'll face choices that could either guide you to greatness or leave you wandering.")
