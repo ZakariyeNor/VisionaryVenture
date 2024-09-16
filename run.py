@@ -25,7 +25,7 @@ def start_adventure():
                 print("As you step into the sprawling campus of innovation, you'll face choices that could either guide you to greatness or leave you wandering.")
                 print("Trust your instincts, think wisely, and remember, every decision shapes your journey.")
                 print("\nGood luck, adventurer! Let the journey begin...\n")
-                break
+                return player_name
 
             else:
                 print("Name cannot be empty. Please enter a valid name.\n")
@@ -92,13 +92,13 @@ def adventure_choices():
         else:
             print("Invalid option. Please choose 'explore' or 'head'. \n")
 
-def game_loop():
+def game_loop(player_name):
     while True:
         result = adventure_choices()
         building = main_building()
         higher_office = top_office()
         ceo = ceo_office()
-        exit = exit_options()
+        exits = exit_options(player_name)
 
         if result == 'main_building':
             main_building()
@@ -120,8 +120,8 @@ def game_loop():
         elif final == 'final_decision':
             final_decision()
 
-        elif exit == 'exit_options':
-            exit_options()
+        elif exits == 'exit_options':
+            exit_options(player_name)
 
         else:
             print(F"An unexpected error occurred.")
@@ -209,11 +209,11 @@ def final_decision():
 
     elif choise == 'ask':
         print("Tim Cook shares valuable insights with you. You win the game!")
-        return 'exit_options'
+        return 'final_decision'
     else:
         print("Invalid option. Please choose 'leave' or 'ask'. \n")
 
-def exit_options():
+def exit_options(player_name):
     """
     Options to exit the Park
     """
@@ -238,14 +238,15 @@ def main():
     """
 
     start_adventure()
-    game_loop()
+    player_name = start_adventure()
+    game_loop(player_name)
     adventure_choices()
     main_building()
     executive_corridor()
     top_office()
     ceo_office()
     final_decision()
-    result = exit_options(option)
+    exit_options(option)
 
 
 #Calling the main function
