@@ -1,5 +1,9 @@
-#importing math module
-import math 
+#importing math, os and time modules
+import os
+import math
+import time
+
+
 
 def start_adventure():
     """
@@ -118,7 +122,7 @@ def game_loop(player_name):
             ceo_office()
 
         elif final == 'final_decision':
-            final_decision()
+            exit_options()
 
         elif exits == 'exit_options':
             exit_options(player_name)
@@ -237,7 +241,7 @@ def main():
     Main function to controll the flow of the game and call all the program from one function
     """
 
-    start_adventure()
+    
     player_name = start_adventure()
     game_loop(player_name)
     adventure_choices()
@@ -246,7 +250,7 @@ def main():
     top_office()
     ceo_office()
     final_decision()
-    exit_options(option)
+    exit_options(player_name)
 
 
 #Calling the main function
