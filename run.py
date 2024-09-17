@@ -3,6 +3,7 @@ import os
 import math
 import time
 
+# Global variable to store and access the player's name, used throughout the functions.
 global PLAYER_NAME
 
 def clear():
@@ -13,7 +14,7 @@ def clear():
 
 def start_adventure():
     """
-    Introduction for the adventure game, telling the user where he/she is, the main goal, advice to choose wisely and asking to start with their name.
+    Introduction for the adventure game, telling the user where he/she is, the main goal, advice to choose wisely and asking to start with their age.
     """
     global PLAYER_NAME
     print("\nWelcome to the Apple Park Adventure!")
@@ -37,6 +38,7 @@ def start_adventure():
     
         #Asking for the name only after age has been validated so player doesn't enter a 
         # name if they're not allowed to continue. 
+
     while True:
             PLAYER_NAME = input("What's your name: ").strip()
             clear()
@@ -80,14 +82,17 @@ def validate_player_name(name):
         return all(part.isalpha() or part.isspace() for part in name)
 
 def game_over():
+    """
+    Ends the game and displaying a thankz message.
+    """
     global PLAYER_NAME
-    print(f"Thank you {PLAYER_NAME} for playing the journey to the highest office at Apple Park!")
+    print(f"\nThank you {PLAYER_NAME} for playing the journey to the highest office at Apple Park!")
     exit()
 
 def adventure_choices():
     """
     Giving the user the important choice of the adventure and calling the main building if user takes the right path.
-    Returns the result of the user's decision.
+    Calling the game over function if user want to stay in the visit center.
     """
 
     while True:
@@ -119,7 +124,7 @@ def adventure_choices():
 
 def main_building():
     """
-    Inform that the user arrived The Spaceship, give options and if he takes the right path call the executive corridor function otherwise error message and game over from the executive corridor function
+    Inform that the user arrived The Spaceship, give options and if he takes the right path call the executive corridor function otherwise error message and game over. 
     """
     while True:
 
@@ -142,7 +147,7 @@ def main_building():
 
 def executive_corridor():
     """
-    Function to give the user two options, go to the highest office or go high secret area, and depends the choise either keep playin or being escorted out by security and loose the game
+    Function to give the user two options, go to the highest office or go high secret area, and depends on the users choise to keep playin or being escorted out by security and loose the game
     """
 
     while True:
@@ -160,7 +165,6 @@ def executive_corridor():
             print("Invalid option. Please choose 'executive' or 'labs'. \n")
 
     top_office()
-
 
 def top_office():
     """
@@ -183,10 +187,10 @@ def top_office():
 
     ceo_office()
     
-
 def ceo_office():
     """
-    Function to give the user to be bolite and wait the Apple CEO or go in his office and ask your question
+    Gives the player a polite choice to either wait for the Apple CEO to invite him/her in,
+    or enter the office and ask what he/she wants.
     """
 
     while True:
@@ -207,7 +211,7 @@ def ceo_office():
 
 def final_decision():
     """
-    Function for the final step to win or loose the adventure game
+    Function for the final step to win or loose the adventure game. 
     """
 
     while True:
@@ -226,14 +230,14 @@ def final_decision():
 
     exit_options()
 
-def exit_options(player_name):
+def exit_options():
     """
     Options to exit the Park
     """
     global PLAYER_NAME
 
     while True:
-        print(f"Adventurer {PLAYER_NAME} you have 5 options to exit Apple Park:")
+        print(f"Adventurer {PLAYER_NAME} you have 5 options to exit Apple Park:\n")
 
         exit_options_list = [
             "1. Exit through the main gate and head to the Visitor Center",
@@ -246,24 +250,24 @@ def exit_options(player_name):
         for option in exit_options_list:
             print(option)
 
-        choise = input(f"\n Choose which path you want take to exit the Apple Park")
+        choise = input(f"\n Choose which path you want take to exit the Apple Park: ")
         clear()
 
         if choise in ["1", "2", "3", "4", "5"]:
             if choise == "1":
-                print("You exited through the main gate.")
+                print("\nYou exited through the main gate.\n")
                 break
             elif choise == "2":
-                print("You exited the side gate near the Steve Jobs Theater.")
+                print("\nYou exited the side gate near the Steve Jobs Theater.\n")
                 break
             elif choise == "3":
-                print("You exited using the underground parking near the R&D Labs.")
+                print("\nYou exited using the underground parking near the R&D Labs.\n")
                 break
             elif choise == "4":
-                print("You took helicoter from the rooftop.")
+                print("\nYou took helicoter from the rooftop.\n")
                 break
-            elif choise == "3":
-                print("You exited walking out through the beautifully landscaped garden paths.")
+            elif choise == "5":
+                print("\nYou exited out through the beautifully landscaped garden paths.\n")
                 break
         else:
             print(f"{choise} Invalid. Please enter 1 - 5\n")
