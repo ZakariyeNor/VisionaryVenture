@@ -1,6 +1,6 @@
 # Apple Park Adventure
 
-Welcome .....
+Welcome to Apple Park Adventure. This text based game is a python terminal game and the users can choose which option they want to get to the highest office of Apple Park and meet Apple ceo Tim Cook.
 
 ## Features 
 
