@@ -57,3 +57,12 @@
   - The exit function works also.
 - Result = no error
 
+##### Testing on pep8 
+
+- These are (Total 86 errors) the errors I solved when I did test the source code on pep8
+
+- No space between hashtag and importing modules
+- Line too long and expected 2 blank lines, found 1
+- Whitespaces, trailing whitespace and over-indented
+- Blank lines contains whitespaces and block comment should start with '# 
+- Blank line at end of file
