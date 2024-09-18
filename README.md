@@ -6,6 +6,8 @@ Apple Park Adventure is a text-based adventure game that takes place in the icon
 
 ## Features 
 
+### Existing Features
+
 - Informing if user wins or looses the game.
 - Interactive text-based adventure.
   - Making the information text show up 0.25 seconds after one another.
@@ -25,14 +27,11 @@ Apple Park Adventure is a text-based adventure game that takes place in the icon
 - Multiple decision points that determine the outcome of the game.
   - User can only choose one of the two options otherwise it goes in loop. 
 
-### Existing Features
-
-- __The Landing Page__
-
-
-
 ### Features Left to Implement
 
+- Allow player to see visual images of Apple Park.
+- Digital timer 
+  - Limit the time a player can play the game
 
 
 
