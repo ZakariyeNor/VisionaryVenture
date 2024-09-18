@@ -7,6 +7,12 @@ Apple Park Adventure is a text-based adventure game that takes place in the icon
 
 ## Features 
 
+- Interactive text-based adventure.
+- Multiple decision points that determine the outcome of the game.
+- Age validation to ensure the player is eligible to play.
+- Custom player name input to personalize the experience.
+- Dynamic screen cleanup for smooth transitions betwenn game events.
+![Responsive design](/assets/mockups/player_validation.png) ![Responsive design](/assets/mockups/clear.png)
 ### Existing Features
 
 - __The Landing Page__
