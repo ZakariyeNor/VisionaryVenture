@@ -1,6 +1,8 @@
 # Apple Park Adventure
 
-Welcome to Apple Park Adventure. This text based game is a python terminal game and the users can choose which option they want to get to the highest office of Apple Park and meet Apple ceo Tim Cook.
+Apple Park Adventure is a text-based adventure game that takes place in the iconic Apple Park campus. In this game, the player navigates through various choices to reach the highest office in the building and ultimately meet Tim Cook. Along the way, the player must make careful decisions, as the wrong path may lead to failure!
+
+
 
 ## Features 
 
