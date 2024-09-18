@@ -2,6 +2,7 @@
 
 Apple Park Adventure is a text-based adventure game that takes place in the iconic Apple Park campus. In this game, the player navigates through various choices to reach the highest office in the building and ultimately meet Tim Cook. Along the way, the player must make careful decisions, as the wrong path may lead to failure!
 
+![Responsive design](/assets/mockups/respon.png)
 
 
 ## Features 
