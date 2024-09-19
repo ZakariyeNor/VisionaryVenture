@@ -33,37 +33,26 @@ Apple Park Adventure is a text-based adventure game that takes place in the icon
 - Digital timer 
   - Limit the time a player can play the game
 
-
-
-## UX/UI
-
-### User Goals
-
-
-
-
-### Site Owner Goals
-
-
-### Target Audience
-
-
-### User Stories
-
- 
-
-
-## Mockups
-
-
-
-## Tools & Technologies Used
-
-
-
 ## Testing
 
 
+## Bugs
+
+Solved Bugs
+
+- Too long lines and White spaces
+- Hash tag for the comments 
+- Over indented and visual indented lines 
+- Exit options was printing only the text
+
+Remaining Bugs
+
+- No bugs remaining
+
+Validator Testing 
+
+- PEP8 
+  - Over 80 errors were retuned from PEP8online.com
 
 ### Validator Testing 
 
