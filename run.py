@@ -81,7 +81,7 @@ def start_adventure():
             print("\nGood luck, adventurer! Let the journey begin...\n")
             return PLAYER_NAME
         else:
-            print("Name cannot be empty. Please enter a valid name.\n")
+            print(f"{PLAYER_NAME}, Is not valid, Please input valid name\n")
 
 
 def validate_player_age(age_input):
@@ -160,21 +160,26 @@ def adventure_choices():
                     "You spend some time exploring the Visitor Center,"
                     "admiring the Apple products and grabbing a coffee."
                     )
-            choise = input(
-                    "Do you now want to head to the main building"
-                    "or stay longer? (head/stay) "
-                    ).lower()
-            clear()
-            if choise == 'stay':
-                print(
-                    "You stayed too long, and the"
-                    "offices closed. Game over."
-                    )
-                game_over()
+        
+            while True:
+                choise = input(
+                        "Do you now want to head to the main building"
+                        "or stay longer? (head/stay) "
+                        ).lower()
+                clear()
+                if choise == 'stay':
+                    print(
+                        "You stayed too long, and the"
+                        "offices closed. Game over."
+                        )
+                    game_over()
 
-            elif choise == 'head':
-                print("You decide to head towards the main building.")
-                break
+                elif choise == 'head':
+                    print(
+                        "You decide to"
+                        "head towards the main building."
+                        )
+                    break
 
             else:
                 print("Invalid option. Please choose 'stay' or 'head'. \n")
