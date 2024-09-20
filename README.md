@@ -69,11 +69,39 @@ Validator Testing
 - PEP8 
   - Over 80 errors were retuned from PEP8online.com
 
-### Validator Testing 
-
-
-
 ## Deployment
+
+- This project were deployed using Code Institute mock terminal for Heroku.
+  - The live deployed application can be found deployed on [Heroku](https://apple-park-eedfc5a2a619.herokuapp.com/).
+
+#### Heroku Deployment
+
+- Steps for deployment: 
+
+  - Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+  - Choose app name and it must be unique, then choose a region (EU or USA), and finally, select **Create App**.
+  - Further down, to support dependencies, select **Add Buildpack**.
+  - Connect to Github, and then search the repository.
+  - Deployed manually
+
+#### Cloning
+
+1. Go to the [GitHub repository](https://github.com/ZakariyeNor/VisionaryVenture) 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+	- `git clone https://github.com/ZakariyeNor/VisionaryVenture.git`
+7. Press Enter to create your local clone.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ZakariyeNor/VisionaryVenture)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
 
 
 ## Credits 
