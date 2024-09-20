@@ -122,6 +122,11 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 
 ### Media 
 
-| [Chatgpt](https://chatgpt.com/) | Questions | Different paths | Options | Chatgpt generated fictional Apple Park adventure game, their options and different paths but I choose the which one is the right one |
+| [Chatgpt](https://chatgpt.com/) | Questions | Different paths | Options | Chatgpt generated fictional Apple Park adventure game, their options and different paths but I choose which one of these two options is the right one |
 
 ### Acknowledgements
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- Educators and Mentors: Thank you to all the teachers and my personal mentor [Tim Nelson](https://github.com/TravelTimN) who provided guidance and inspiration. Your passion for sharing knowledge ignited my interest in this project.
+- Developers of Tools and Resources and Content Creators: Thanks to the creator of Markdown Builder [Tim Nelson](https://github.com/TravelTimN) and youtuber [Tech with Tim](https://www.youtube.com/@TechWithTim) whose tutorials and insights shaped my understanding of coding and game development. Your willingness to share knowledge made a difference.
