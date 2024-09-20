@@ -116,9 +116,12 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 
 ## Credits 
 
-### Content
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | Tool to help generate the Markdown files |
 
+| [Youtube Tutorial](https://www.youtube.com/watch?v=th4OBktqK1I) | Funtions and Conditions | Tutorial I watched to learn more and practise functions and conditions |
 
 ### Media 
+
+| [Chatgpt](https://chatgpt.com/) | Questions | Different paths | Options | Chatgpt generated fictional Apple Park adventure game, their options and different paths but I choose the which one is the right one |
 
 ### Acknowledgements
