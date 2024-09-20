@@ -86,14 +86,18 @@ Validator Testing
 
 #### Cloning
 
-1. Go to the [GitHub repository](https://github.com/ZakariyeNor/VisionaryVenture) 
-2. Locate the Code button above the list of files and click it 
-3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
-4. Open Git Bash or Terminal
-5. Change the current working directory to the one where you want the cloned directory
-6. In your IDE Terminal, type the following command to clone my repository:
-	- `git clone https://github.com/ZakariyeNor/VisionaryVenture.git`
-7. Press Enter to create your local clone.
+- Setting Up the Project Locally
+
+To work on this project locally, you need to create a local copy of the repository on your computer. This process, called cloning, allows you to view, edit, and experiment with the codebase independently.
+
+  1. Go to the [GitHub repository](https://github.com/ZakariyeNor/VisionaryVenture) 
+  2. Locate the Code button above the list of files and click it 
+  3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+  4. Open Git Bash or Terminal
+  5. Change the current working directory to the one where you want the cloned directory
+  6. In your IDE Terminal, type the following command to clone my repository:
+    - `git clone https://github.com/ZakariyeNor/VisionaryVenture.git`
+  7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
@@ -101,6 +105,14 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+#### Forking
+
+- You can fork this repository by using the following steps:
+
+  1. Log in to GitHub and locate the [GitHub Repository](https://github.com/ZakariyeNor/VisionaryVenture)
+  2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+  3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
 
 
