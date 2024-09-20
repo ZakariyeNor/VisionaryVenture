@@ -112,9 +112,13 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 
   1. Log in to GitHub and locate the [GitHub Repository](https://github.com/ZakariyeNor/VisionaryVenture)
   2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-  3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
-
-
+  3. Once clicked, you should now have a copy of the original repository in your own GitHub account!.
 
 ## Credits 
 
+### Content
+
+
+### Media 
+
+### Acknowledgements
