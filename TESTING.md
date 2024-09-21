@@ -121,3 +121,20 @@ The Testing 4 screenshots:
 - Whitespaces, trailing whitespace and over-indented
 - Blank lines contains whitespaces and block comment should start with '# 
 - Blank line at end of file
+
+
+## Defensive Programming
+
+- Users must enter valid age, name and one of the options
+- Name input cannot be empty
+
+
+First introduction of the app, then If the user input security clearence and age older than 18 it goes to the next step where the program asks to input name. 
+
+![Intro Of The App](documentation/intro.png) ![Security Clearence](documentation/age_valid.png) ![Name](documentation/name_clear.png)
+  
+  
+  
+  
+  
+ 
