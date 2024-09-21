@@ -26,7 +26,7 @@ def start_adventure():
 
     print(
         "As a tech enthusiast, you have decided to explore"
-        " the heart of innovation at Apple Park."
+        "the heart of innovation at Apple Park."
     )
     time.sleep(0.25)
 
@@ -98,8 +98,8 @@ def validate_player_age(age_input):
         if player_age < 18:
             print(
                 f"You are {player_age} years old,"
-                "you need Security House permission to"
-                "play the game alone."
+                " you need Security House permission to"
+                " play the game alone."
                 )
             return False
         else:
@@ -110,7 +110,7 @@ def validate_player_age(age_input):
         else:
             print(
                 "Invalid input. Please enter a"
-                "number for age or 'security'.\n"
+                " number for age or 'security'.\n"
                 )
             return False
 
@@ -151,33 +151,33 @@ def adventure_choices():
     """
 
     while True:
-        choise = input(
+        choice = input(
             "You start at the Apple Park Visitor Center."
             " Do you explore the store or head straight to"
             " the main building? (explore/head) "
             ).lower()
         clear()
 
-        if choise == 'explore':
+        if choice == 'explore':
             print(
                     "You spend some time exploring the Visitor Center,"
                     " admiring the Apple products and grabbing a coffee."
                     )
-            choise = input(
+            choice = input(
                         "Do you now want to head to the main building"
                         " or stay longer? (head/stay) "
                         ).lower()
             clear()
 
             while True:
-                if choise == 'stay':
+                if choice == 'stay':
                     print(
                         "You stayed too long, and the"
                         " offices closed. Game over."
                         )
                     game_over()
 
-                elif choise == 'head':
+                elif choice == 'head':
                     print(
                         "You decide to"
                         " head towards the main building."
@@ -189,7 +189,7 @@ def adventure_choices():
                     time.sleep(0.25)
 
                     print(
-                        f"{PLAYER_NAME} you typed {choise}, and it's"
+                        f"{PLAYER_NAME} you typed {choice}, and it's"
                         " invalid option. Please choose"
                         " 'stay' or 'head' next time. \n"
                         )
@@ -199,7 +199,7 @@ def adventure_choices():
                     time.sleep(0.25)
                     break
 
-        elif choise == 'head':
+        elif choice == 'head':
             break
 
         else:
@@ -219,7 +219,7 @@ def main_building():
     """
     while True:
 
-        choise = input(
+        choice = input(
             "You arrive at the entrance of the Apple Park main"
             " building, also known as 'The Spaceship.' The circular"
             " glass structure is impressive. Do you enter through the"
@@ -228,7 +228,7 @@ def main_building():
             ).lower()
         clear()
 
-        if choise == 'lobby':
+        if choice == 'lobby':
             print(
                 "You enter through the sleek main lobby,"
                 " greeted by natural light and a massive"
@@ -236,7 +236,7 @@ def main_building():
                 )
             break
 
-        elif choise == 'side':
+        elif choice == 'side':
             print(
                 "You enter through a smaller side door"
                 " near the Steve Jobs Theater. It's quieter"
@@ -257,26 +257,26 @@ def executive_corridor():
     """
     Function to give the user two options, go to the
     highest office or go high secret area, and depends
-    on the users choise to keep playin or being escorted
+    on the users choice to keep playin or being escorted
     out by security and loose the game
     """
 
     while True:
-        choise = input(
+        choice = input(
             "Inside the building, you spot two elevators."
             " One says 'Executive Floors,' and the other"
             " 'R&D Labs.' Which one do you take? (executive/labs) "
             ).lower()
         clear()
 
-        if choise == 'executive':
+        if choice == 'executive':
             print(
                 "You take the executive elevator up"
                 " towards the highest office."
             )
             break
 
-        elif choise == 'labs':
+        elif choice == 'labs':
             print(
                 "You ended up in the Research and"
                 " Development Labs, where everything is top"
@@ -300,7 +300,7 @@ def top_office():
     the right path
     """
     while True:
-        choise = input(
+        choice = input(
             "You exit the elevator and walk down the executive"
             " corridor. Do you want to visit the design team offices"
             " on this floor or go straight to the top"
@@ -308,14 +308,14 @@ def top_office():
             ).lower()
         clear()
 
-        if choise == 'design':
+        if choice == 'design':
             print(
                 "You meet the design team, but the office"
                 " you're looking for isn't here. You lose the game."
             )
             game_over()
 
-        elif choise == 'top':
+        elif choice == 'top':
             print("You head towards the top office of Apple.")
             break
         else:
@@ -335,14 +335,14 @@ def ceo_office():
     """
 
     while True:
-        choise = input(
+        choice = input(
             "You arrive at Tim Cook's office."
             " The door is slightly open. Do you"
             " enter or wait? (enter/wait) "
             ).lower()
         clear()
 
-        if choise == 'enter':
+        if choice == 'enter':
             print(
                 "You meet Tim Cook, and he greets you"
                 " warmly. You’ve reached the highest"
@@ -350,7 +350,7 @@ def ceo_office():
                 )
             break
 
-        elif choise == 'wait':
+        elif choice == 'wait':
             print(
                 "You wait too long, and the"
                 " office closes. Game over."
@@ -372,20 +372,20 @@ def final_decision():
     """
 
     while True:
-        choise = input(
+        choice = input(
             "Do you ask Tim Cook for advice on your next"
             "move, or just leave the office? (ask/leave) "
             ).lower()
         clear()
 
-        if choise == 'leave':
+        if choice == 'leave':
             print(
                 "You left without talking to Tim Cook."
                 "You missed your chance. Game over."
                 )
             game_over()
 
-        elif choise == 'ask':
+        elif choice == 'ask':
             print(
                 "Tim Cook shares valuable"
                 "insights with you. You win the game!"
@@ -423,43 +423,43 @@ def exit_options():
         for option in exit_options_list:
             print(option)
 
-        choise = input(
+        choice = input(
             f"\n Choose which path you want take to exit the Apple Park: "
             )
         clear()
 
-        if choise in ["1", "2", "3", "4", "5"]:
-            if choise == "1":
+        if choice in ["1", "2", "3", "4", "5"]:
+            if choice == "1":
                 print(
                     "\nYou exited through the main" 
                     " gate and head to the Visitor Center.\n"
                     )
                 break
-            elif choise == "2":
+            elif choice == "2":
                 print(
                     "\nYou exited the side gate"
                     " near the Steve Jobs Theater.\n"
                     )
                 break
-            elif choise == "3":
+            elif choice == "3":
                 print(
                     "\nYou exited using the underground"
                     " parking near the R&D Labs.\n"
                 )
                 break
-            elif choise == "4":
+            elif choice == "4":
                 print(
                     "\nYou take helicoter from the rooftop.\n"
                     )
                 break
-            elif choise == "5":
+            elif choice == "5":
                 print(
                     "\nYou exited out through the"
                     " beautifully landscaped garden paths.\n"
                     )
                 break
         else:
-            print(f"{choise} Invalid. Please enter 1 - 5\n")
+            print(f"{choice} Invalid. Please enter 1 - 5\n")
 
     game_over()
 
