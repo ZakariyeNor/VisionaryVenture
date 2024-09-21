@@ -64,17 +64,17 @@ The Testing 2 screenshots:
   - game over
 - Result = no error
 
-The Testing 2 screenshots:
+The Testing 3 screenshots:
 
 ![Loose Path 1](documentation/loose_1.png)
-![Win Path 2](documentation/second_win.png)
+![Loose Path 2](documentation/second_win.png)
 ![Loose Path 3](documentation/loose_3.png)
 ![Loose Path 4](documentation/loose_4.png)
 ![Loose Path 5](documentation/loose_5.png)
 ![Loose Path 6](documentation/loose_6.png)
 ![Looser Way Out](documentation/game_over.png)
 
-##### Testing 3 
+##### Testing 4 
 
 - Fast game over path
   - Age: 40
@@ -82,9 +82,28 @@ The Testing 2 screenshots:
   - choice 1: explore
   - choice 1: stay
   - game over
-- Result = no error
+- Result = 1 error
 
-##### Testing 4
+Second question error in adventure_choices function
+
+![Runnig Loop](documentation/fastest_loose_path_error.png)
+
+The Solution:
+
+I solved the issue to first break the condition, inform the user that there are only two options and choose one of them next time to go to the next step of the adventure. I also tell them that the adventure game starts from the first question.
+
+![Breaking The Loop](documentation/second_question_solution.png)
+
+
+The Testing 4 screenshots:
+
+![Fastest Loose Path 1](documentation/loose_1.png)
+![Fastest Loose Path 2](documentation/second_win.png)
+![Fastest Loose Path 3](documentation/first_win_option.png)
+![Fastest Loose Path 4](documentation/fastest_loose_path_4.png)
+![Looser Way Out](documentation/fastest_loose_path_5.png)
+
+##### Testing 5
 
 - Testing the output informations, clear function, game over function and main function.
   - They are working as they should.

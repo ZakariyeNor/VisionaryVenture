@@ -163,13 +163,13 @@ def adventure_choices():
                     "You spend some time exploring the Visitor Center,"
                     "admiring the Apple products and grabbing a coffee."
                     )
-        
-            while True:
-                choise = input(
+            choise = input(
                         "Do you now want to head to the main building"
                         "or stay longer? (head/stay) "
                         ).lower()
-                clear()
+            clear()
+        
+            while True:
                 if choise == 'stay':
                     print(
                         "You stayed too long, and the"
@@ -183,16 +183,23 @@ def adventure_choices():
                         "head towards the main building."
                         )
                     break
-
-            else:
-                print("Invalid option. Please choose 'stay' or 'head'. \n")
+                    
+                else:
+                    print("Invalid option. Please choose 'stay' or 'head'. \n")
+                    print(
+                        f"{PLAYER_NAME} you typed {choise}, and it's"
+                        " invalid option. Please choose"
+                        " 'stay' or 'head' next time. \n"
+                        )
+                    print("Let's start again \n")
+                    break
 
         elif choise == 'head':
             break
 
         else:
             print("Invalid option. Please choose 'explore' or 'head'. \n")
-
+        
     main_building()
 
 
