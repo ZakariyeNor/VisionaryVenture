@@ -427,7 +427,10 @@ def exit_options():
 
         if choise in ["1", "2", "3", "4", "5"]:
             if choise == "1":
-                print("\nYou exited through the main gate.\n")
+                print(
+                    "\nYou exited through the main" 
+                    "gate and head to the Visitor Center.\n"
+                    )
                 break
             elif choise == "2":
                 print(
@@ -442,7 +445,9 @@ def exit_options():
                 )
                 break
             elif choise == "4":
-                print("\nYou took helicoter from the rooftop.\n")
+                print(
+                    "\nYou take helicoter from the rooftop.\n"
+                    )
                 break
             elif choise == "5":
                 print(

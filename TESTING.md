@@ -152,3 +152,62 @@ Now if the user chooses Stay the game over function will be called and the game 
 If The user choice is Head:
 
 ![After Head option](documentation/after_head.png)
+
+Both options is the right one's if the user chooses lobby or side it goes to the win path where it called in the program the executive corridor:
+
+![The Win Path](documentation/after_lobby.png)
+
+Now If the users chooses labs: 
+
+![The Looser Path](documentation/after_win_path.png)
+![The Looser Way Out](documentation/ends.png)
+
+But if the users choose executive:
+
+![The Win Path 2](documentation/win_path_2.png)
+
+If the users choose design:
+
+![The Looser Path 2](documentation/looser_path_2.png)
+
+Otherwise if their choice is top:
+
+![The Win Path 3](documentation/win_path_3.png)
+
+Now if the user choice is wait:
+
+![The Looser Path 3](documentation/looser_path_3.png)
+
+Or their choice is enter:
+
+![The Win Path 4](documentation/win_path_4.png)
+
+Now if the user choice is leave:
+
+![The Looser Path 4](documentation/looser_path_4.png)
+
+If the user choice is ask, he/she wins the adventure and next step will be to choose which one of the exit options you want go out frm the Apple Park.
+
+![Win stage](documentation/win_stage.png)
+
+The Winner way outs: 
+
+ - If the user chooses 1 it prints out: you exit through the main gate and then the program calls the game over function.
+
+ ![Stage 1](documentation/exit_option_1.png)
+
+ - If the user chooses 2 it prints out: you leave by the side gate near the Steve Jobs Theater and then the program calls the game over function.
+
+ ![Stage 2](documentation/exit_option_2.png)
+
+ - If the user chooses 3 it prints out: you exit using the underground parking near the R&D Labs and then the program calls the game over function.
+
+ ![Stage 3](documentation/exit_option_3.png)
+
+ - If the user chooses 4 it prints out: you took helicopter from the rooftop and then the program calls the game over function.
+
+![Stage 4](documentation/exit_option_4.png)
+
+ - And the last option if the user chooses 5 it prints out: you walk out through the beautifully landscaped garden paths and then the program calls the game over function.
+
+ ![Stage 5](documentation/exit_option_5.png)
