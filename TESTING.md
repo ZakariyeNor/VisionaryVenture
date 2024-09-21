@@ -137,4 +137,18 @@ Invalid inputs in name and age:
 
 ![Invalid Age Input](documentation/wrong_age_input.png) ![Invalid Name Input](documentation/wrong_name_input.png)
   
- 
+If user input is valid it goes to the first question and asks to either expolore or head to the main building. And also welcoming to the adventure and while callin the user name. 
+
+![First Option](documentation/explore.png) ![Second Option](documentation/head.png)
+
+If The user choice is Explore:
+
+![After Explore option](documentation/after_explore.png)
+
+Now if the user chooses Stay the game over function will be called and the game ends. But if the user chooses head it goes continue to the base while loop condition. 
+
+![Game Over](documentation/stay_choice.png)
+
+If The user choice is Head:
+
+![After Head option](documentation/after_head.png)
