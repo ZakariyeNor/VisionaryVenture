@@ -64,6 +64,19 @@ The Testing 2 screenshots:
   - game over
 - Result = no error
 
+The Testing 2 screenshots:
+
+![Win Path 1](documentation/first_win_option.png)
+![Win Path 2](documentation/second_win.png)
+![Win Path 3](documentation/win_3.png)
+![Win Path 4](documentation/win_4.png)
+![Win Path 5](documentation/win_5.png)
+![Win Path 6](documentation/win_6.png)
+![Win Path 7](documentation/win_7.png)
+![Win Path 8](documentation/win_8.png)
+![Exit Options](documentation/exit_option.png)
+![Winner Way Out](documentation/winner_exit.png)
+
 ##### Testing 3 
 
 - Fast game over path
