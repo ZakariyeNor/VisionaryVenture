@@ -186,12 +186,17 @@ def adventure_choices():
                     
                 else:
                     print("Invalid option. Please choose 'stay' or 'head'. \n")
+                    time.sleep(0.25)
+
                     print(
                         f"{PLAYER_NAME} you typed {choise}, and it's"
                         " invalid option. Please choose"
                         " 'stay' or 'head' next time. \n"
                         )
+                    time.sleep(0.25)
+
                     print("Let's start again \n")
+                    time.sleep(0.25)
                     break
 
         elif choise == 'head':
