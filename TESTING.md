@@ -135,6 +135,6 @@ First introduction of the app, then If the user input security clearence and age
   
 Invalid inputs in name and age:
 
-
+![Invalid Age Input](documentation/wrong_age_input.png) ![Invalid Name Input](documentation/wrong_name_input.png)
   
  
