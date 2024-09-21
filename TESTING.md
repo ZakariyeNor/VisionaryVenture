@@ -66,16 +66,13 @@ The Testing 2 screenshots:
 
 The Testing 2 screenshots:
 
-![Win Path 1](documentation/first_win_option.png)
+![Loose Path 1](documentation/loose_1.png)
 ![Win Path 2](documentation/second_win.png)
-![Win Path 3](documentation/win_3.png)
-![Win Path 4](documentation/win_4.png)
-![Win Path 5](documentation/win_5.png)
-![Win Path 6](documentation/win_6.png)
-![Win Path 7](documentation/win_7.png)
-![Win Path 8](documentation/win_8.png)
-![Exit Options](documentation/exit_option.png)
-![Winner Way Out](documentation/winner_exit.png)
+![Loose Path 3](documentation/loose_3.png)
+![Loose Path 4](documentation/loose_4.png)
+![Loose Path 5](documentation/loose_5.png)
+![Loose Path 6](documentation/loose_6.png)
+![Looser Way Out](documentation/game_over.png)
 
 ##### Testing 3 
 
