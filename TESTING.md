@@ -133,8 +133,8 @@ First introduction of the app, then If the user input security clearence and age
 
 ![Intro Of The App](documentation/intro.png) ![Security Clearence](documentation/age_valid.png) ![Name](documentation/name_clear.png)
   
-  
-  
-  
+Invalid inputs in name and age:
+
+
   
  
