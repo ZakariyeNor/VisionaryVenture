@@ -68,6 +68,7 @@ Validator Testing
 
 - PEP8 
   - Over 80 errors were retuned from PEP8online.com
+  - To know about the PEP8 errors and their solutions [TESTING.md](TESTING.md)
 
 ## Deployment
 
