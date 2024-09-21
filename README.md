@@ -60,6 +60,7 @@ Solved Bugs
 - Exit options was printing only the text
 - Added while loop to the next question
 - In Testing part 4, I noticed that if the user inputs something else rather then 'stay' or 'head' it runs the prints statement and never stops. I solved this to break the loop add another print statement to start over and choose the right one next time. And the game starts from the base while loop because of these two questions are connected to each other, user must choose 'explore ' to come to the next question where user must choose either 'stay' or 'head'. To find more about this solution, please visit [Testing 4](TESTING.md)
+- I noticed when I was writting the TESTING.md file that some of the text have no space between and it happened when I was fixing too long lines, and I solved to give spaces.
 
 Remaining Bugs
 
