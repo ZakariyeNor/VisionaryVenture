@@ -13,8 +13,9 @@ Testing if the game goes step by step and shows the right content every step.
 - Testing introduction text, age and name and they working as they should. 
   - When user enter age older than 18 or have security clearence from the Security House, then the user can go to the next step where user must type in only name (alphabetic) then he/she can start the adventure. Otherwise user can't go to the next step, it'll be loop asking same question only: if user don't have security clearence, younger then 18 or types alphabetic in age input or number in name input or empty in name input. The introductions and information of the adventure works also as they should, the text prints out 0.25 seconds after one another.
   - User will be informed that he/she must enter valid name, age, security clearence from the Security House or that the name input can't be empty.
-   - Here is screenshots of the testing name and age:
-![Adventure Intro and Age](documentation/intro.png) ![Security Clearence](documentation/age_valid.png) ![Name Check](documentation/name_clear.png)
+- Here is screenshots of the testing name and age:
+
+![Adventure Intro and Age](documentation/intro.png) ![Security Clearence](documentation/age_valid.png) ![Name Check](documentation/name_clear.png) ![Name Loop](documentation/loop.png)
 
 - When I tested the functions call, I get help with my mentor. And my mentor told me that I invoked all the functions three times and to fix this I use while loop and break the condition if the user chooses right option and call the next function inside the while loop scope, otherwise call the game over function so the game exits and tells the user that he/she loose the game.
 - I had also unstyled text and the output informations and input choices made the screen hard to read and find the right text so I fix this to add time between print outputs and clear function (Added time and os modules.) To use time when printing out informations and clear the informations before the user types in one of the options.

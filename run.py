@@ -81,7 +81,10 @@ def start_adventure():
             print("\nGood luck, adventurer! Let the journey begin...\n")
             return PLAYER_NAME
         else:
-            print(f"{PLAYER_NAME}, Is not valid, Please input valid name\n")
+            print(
+                "Name cannot be empty, Please"
+                " enter a valid name (Alphabetic) \n"
+                )
 
 
 def validate_player_age(age_input):
