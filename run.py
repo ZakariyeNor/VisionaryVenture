@@ -168,7 +168,7 @@ def adventure_choices():
                         "or stay longer? (head/stay) "
                         ).lower()
             clear()
-        
+
             while True:
                 if choise == 'stay':
                     print(
@@ -183,7 +183,7 @@ def adventure_choices():
                         "head towards the main building."
                         )
                     break
-                    
+
                 else:
                     print("Invalid option. Please choose 'stay' or 'head'. \n")
                     time.sleep(0.25)
@@ -204,7 +204,7 @@ def adventure_choices():
 
         else:
             print("Invalid option. Please choose 'explore' or 'head'. \n")
-        
+
     main_building()
 
 

@@ -109,6 +109,7 @@ The Testing 4 screenshots:
   - They are working as they should.
   - Time.sleep method also working.
   - The exit function works also.
+- As you can see in these screenshots, the clear function cleans up the screen always, game over works, because it ends the adventure if the user choose invalid option and main function calls functions inside it.
 - Result = no error
 
 ##### Testing on pep8 
