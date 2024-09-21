@@ -24,6 +24,8 @@ Testing if the game goes step by step and shows the right content every step.
 
  ##### Testing 2
 
+This is direct path to win the Apple Park Adventure. User have one of the options to choose and if the user chhose right one it goes the direct path until the exit options, and user can choose which he/she want to exit and no matter which one it prints out the one that the user chooses and calls the game over function. If user chooses the wrong one it can go to the another path that can be end to the win path or the loose path. If user enters something else it informs to choose only one of these two options. 
+
 - Direct win path
   - Age: 24
   - Name: Daiel
@@ -36,6 +38,19 @@ Testing if the game goes step by step and shows the right content every step.
   - choice 7: ask
   - exit option
 - Result = no error
+
+The Testing 2 screenshots:
+
+![Win Path 1](documentation/first_win_option.png)
+![Win Path 2](documentation/second_win.png)
+![Win Path 3](documentation/win_3.png)
+![Win Path 4](documentation/win_4.png)
+![Win Path 5](documentation/win_5.png)
+![Win Path 6](documentation/win_6.png)
+![Win Path 7](documentation/win_7.png)
+![Win Path 8](documentation/win_8.png)
+![Exit Options](documentation/exit_option.png)
+![Winner Way Out](documentation/winner_exit.png)
 
  ##### Testing 3 
 
