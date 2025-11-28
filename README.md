@@ -75,7 +75,7 @@ Validator Testing
 ## Deployment
 
 - This project were deployed using Code Institute mock terminal for Heroku.
-  - The live deployed application can be found deployed on [Heroku](https://apple-park-eedfc5a2a619.herokuapp.com/).
+  - The live deployed application can be found deployed on [Heroku](https://apple-park-2967589dcffb.herokuapp.com/).
 
 #### Heroku Deployment
 
