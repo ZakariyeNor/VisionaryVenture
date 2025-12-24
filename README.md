@@ -44,6 +44,7 @@ The first rule is to varify the age of the player, if it is allowed age it goes 
 - [![Gitpod](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) used as a cloud-based IDE for development.
 - [![Python](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) used as the back-end programming language. 
 - [![Heroku](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) used for hosting the deployed back-end site.
+- [![Railway](https://img.shields.io/badge/Railway-grey?logo=railway&logoColor=0B0D0E)](https://railway.app) used for hosting the application after migration from Heroku.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
 
 
@@ -75,11 +76,20 @@ Validator Testing
 ## Deployment
 
 - This project were deployed using Code Institute mock terminal for Heroku.
-  - The live deployed application can be found deployed on [Heroku](https://apple-park-2967589dcffb.herokuapp.com/).
+  - The project has been **migrated to [Railway](https://railway.app)** for improved performance and reliability.
 
-#### Heroku Deployment
+#### Railway Deployment
 
-- Steps for deployment: 
+- Steps for deployment on Railway:
+
+  - Create a [Railway](https://railway.app) account
+  - Connect your GitHub repository to Railway
+  - Railway automatically detects the Python and Node.js requirements from `requirements.txt` and `package.json`
+  - Set environment variables if needed
+  - Deploy automatically on every push to main branch
+  - The application runs using the Dockerfile configuration
+
+#### Heroku Deployment (Legacy) 
 
   - Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
   - Choose app name and it must be unique, then choose a region (EU or USA), and finally, select **Create App**.
