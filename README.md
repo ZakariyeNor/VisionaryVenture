@@ -76,7 +76,7 @@ Validator Testing
 ## Deployment
 
 - This project were deployed using Code Institute mock terminal for Heroku.
-  - The project has been **migrated to [Railway](https://railway.app)** for improved performance and reliability.
+  - The project has been **migrated to [Railway]([https://railway.app](https://web-production-e0c90.up.railway.app/)** for improved performance and reliability.
 
 #### Railway Deployment
 
