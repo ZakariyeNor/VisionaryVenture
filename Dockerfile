@@ -1,7 +1,7 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
-# Install Python and pip
-RUN apk add --no-cache python3 py3-pip
+# Install Python, pip, and build dependencies
+RUN apk add --no-cache python3 py3-pip make g++ gcc
 
 # Set working directory
 WORKDIR /app
